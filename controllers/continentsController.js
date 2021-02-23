@@ -42,6 +42,4 @@ router.get('/:id/countries', async (req, res) => {
   res.json({ countries })
 })
 
-
-
 module.exports = router
