@@ -1,8 +1,10 @@
-<h1>Countries Index Page</h1>
-<a href="/countries/new">New Dino</a>
+<a href="/countries/new">New Countries</a>
 
-<% dinos.forEach(dino => { %>
-    <div class="card">
-        <a href="/countries/<%= dino.id %>"><%= dino.name %> the <%= dino.type %></a>
-    </div>
-<% }) %>
+<ul>
+    <% for (country of countries) { %>
+        <li>
+            <h2><a href="/countrie/<%= country.id %>"></a><% country.name %> </h2>
+            <h4>Population: <%= country.population %></h4>
+        </li>
+        <% } %>
+</ul>

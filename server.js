@@ -6,10 +6,13 @@ const rowdyRes = rowdy.begin(app)
 
 // Middleware
 app.set('view engine', 'ejs')
+app.use(require('express-ejs-layouts'))
+app.use(require('method-override')('_method'))
 app.use(express.static('public'))
-app.use(ejsLayouts)
 app.use(express.urlencoded({ extended: false }))
-app.use(methodOverride('_method'))
+
+
+
 
 
 app.get('/', (req, res) => {

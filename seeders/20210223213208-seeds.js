@@ -1,6 +1,9 @@
 'use strict';
 const models = require('../models')
 
+
+
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const northAmerica = await models.continent.create({
