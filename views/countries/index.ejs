@@ -1,0 +1,8 @@
+<h1>Countries Index Page</h1>
+<a href="/countries/new">New Dino</a>
+
+<% dinos.forEach(dino => { %>
+    <div class="card">
+        <a href="/countries/<%= dino.id %>"><%= dino.name %> the <%= dino.type %></a>
+    </div>
+<% }) %>
